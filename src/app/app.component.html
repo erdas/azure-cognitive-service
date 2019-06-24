@@ -1,0 +1,33 @@
+<div id="app">
+    <div>
+        <button id="start"
+                (click)="startCamera()">Start Webcam</button>
+        <button id="recognize"
+                (click)="faceRecognition()">Recognize</button>
+        <input type="file"
+               (change)="onFileChanged($event)"><br>
+    </div>
+    <div>
+        <video *ngIf="webcamActive"
+               #webcam
+               id="webcam"
+               [width]="imageWidth"
+               autoplay></video>
+        <img [width]="imageWidth"
+             *ngIf="!webcamActive && captureDataUri != undefined"
+             src="{{ captureDataUri }}"
+             usemap="#faces" />
+        <map name="faces"
+             id="faces">
+            <area *ngFor="let area of areas"
+                  shape="rect"
+                  coords="{{area.y1}} {{area.x1}} {{area.y2}} {{area.x2}}"
+                  title="{{area.info}}">
+        </map>
+    </div>
+
+    <canvas #canvas
+            id="canvas"></canvas>
+
+    <pre>{{faceRecognitionResponse | json}}</pre>
+</div>

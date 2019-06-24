@@ -1,0 +1,15 @@
+#app {
+    text-align: center;
+    color: #fff;
+    margin-top: 60px;
+}
+#video {
+    background-color: #000;
+}
+#canvas {
+    display: none;
+}
+li {
+    display: inline;
+    padding: 5px;
+}
