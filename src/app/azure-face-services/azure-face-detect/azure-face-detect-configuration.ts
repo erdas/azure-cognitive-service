@@ -1,8 +1,8 @@
-import { environment } from '../../../environments/environment';
+import { azureConfiguration } from '../../../environments/azure-configuration';
 import { emitMetaData } from '../common/emit-meta-data';
 
 @emitMetaData
 export class AzureFaceDetectConfiguration {
-    public url = environment.azureFaceDetectUrl;
-    public ocpApimSubscriptionKey = environment.azureOcpApimSubscriptionKey;
+    public url = azureConfiguration.faceDetectUrl;
+    public ocpApimSubscriptionKey = azureConfiguration.ocpApimSubscriptionKey;
 }
