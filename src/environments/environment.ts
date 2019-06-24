@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  azureOcpApimSubscriptionKey: '47a20e57a65c4c108445d6afc789e43a',
+  azureOcpApimSubscriptionKey: '', // add your key here
   azureFaceDetectUrl: 'https://westeurope.api.cognitive.microsoft.com/face/v1.0/detect',
 };
 
